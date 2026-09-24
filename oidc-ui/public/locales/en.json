@@ -147,7 +147,6 @@
     "wallet_header": "Scan the QR code with {{walletName}} app"
   },
   "otp": {
-    "nipnumber": "NIP",
     "sign_in_with_otp": "Login with OTP",
     "resend_otp": "Resend OTP",
     "not_a_robot": "I'm Not a Robot",
@@ -180,7 +179,6 @@
     "and": "and"
   },
   "signInOption": {
-    "nipnumber": "NIP",
     "login_option_heading": "Choose How You Want to Login:",
     "login_with_id": "Login with {{option}}",
     "verify_with_id": "Verify with {{option}}",
@@ -302,27 +300,21 @@
     "buttons": {
       "mobile": "Mobile Number",
       "nrc": "NRC ID",
-      "vid": "VID",
-      "email": "Email",
-      "nipNumber": "IPN",
-      "uin": "UIN"
+      "vid": "UIN/VID",
+      "email": "Email"
     },
     "input": {
       "label": {
         "mobile": "Mobile Number",
         "nrc": "NRC ID",
-        "vid": "VID",
-        "email": "Email",
-        "nipNumber": "IPN",
-        "uin": "UIN"
+        "vid": "UIN/VID",
+        "email": "Email"
       },
       "placeholder": {
         "mobile": "Enter Mobile Number",
         "nrc": "Enter NRC ID",
-        "vid": "Enter VID",
-        "email": "Enter Email ID",
-        "nipNumber": "Enter IPN",
-        "uin": "Enter UIN"
+        "vid": "Enter UIN/VID",
+        "email": "Enter Email ID"
       }
     }
   },
