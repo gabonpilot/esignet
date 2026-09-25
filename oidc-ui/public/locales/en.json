@@ -301,6 +301,7 @@
       "mobile": "Mobile Number",
       "nrc": "NRC ID",
       "vid": "UIN/VID",
+      "nipnumber": "NIP",
       "email": "Email"
     },
     "input": {
@@ -308,12 +309,14 @@
         "mobile": "Mobile Number",
         "nrc": "NRC ID",
         "vid": "UIN/VID",
+        "nipnumber": "NIP",
         "email": "Email"
       },
       "placeholder": {
         "mobile": "Enter Mobile Number",
         "nrc": "Enter NRC ID",
         "vid": "Enter UIN/VID",
+        "nipnumber": "Enter NIP number",
         "email": "Enter Email ID"
       }
     }
