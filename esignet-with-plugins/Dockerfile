@@ -1,5 +1,5 @@
-FROM mosipid/esignet:1.6.2
-#FROM gabonpilot/esignet:gabon-pilot-1.6.2
+#FROM mosipid/esignet:1.6.2
+FROM gabonpilot/esignet:gabon-pilot-1.6.2
 
 ARG SOURCE
 ARG COMMIT_HASH

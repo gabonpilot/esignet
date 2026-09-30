@@ -62,7 +62,7 @@
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
 
     build-dockers-esignet-with-plugins:
-      needs: build-maven-esignet-with-plugins
+      needs: [build-maven-esignet-with-plugins, build-dockers]
 
       strategy:
         matrix:
