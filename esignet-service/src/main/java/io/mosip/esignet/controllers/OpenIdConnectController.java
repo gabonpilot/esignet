@@ -31,6 +31,7 @@ public class OpenIdConnectController {
      */
     @GetMapping(value = "/userinfo",produces = "application/jwt")
     public String getUserInfo(@RequestHeader("Authorization") String bearerToken) throws EsignetException {
+        log.info("bearerToken ------>>>>  : {}", bearerToken);
         return openIdConnectService.getUserInfo(bearerToken);
     }
     
