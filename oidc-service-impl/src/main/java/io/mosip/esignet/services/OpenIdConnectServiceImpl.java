@@ -42,6 +42,7 @@ public class OpenIdConnectServiceImpl implements OpenIdConnectService {
 
     @Override
     public String getUserInfo(String accessToken) throws EsignetException {
+        log.info("Access Token : {} ", accessToken);
         String accessTokenHash = null;
         OIDCTransaction transaction = null;
         try {
@@ -57,12 +58,14 @@ public class OpenIdConnectServiceImpl implements OpenIdConnectService {
 
             accessTokenHash = IdentityProviderUtil.generateOIDCAtHash(tokenParts[1]);
             transaction = cacheUtilService.getUserInfoTransaction(accessTokenHash);
+            log.info("transaction : {}", transaction);
             if(transaction == null)
                 throw new NotAuthenticatedException();
 
             tokenService.verifyAccessToken(transaction.getClientId(), transaction.getPartnerSpecificUserToken(), tokenParts[1]);
             auditWrapper.logAudit(Action.GET_USERINFO, ActionStatus.SUCCESS, AuditHelper.buildAuditDto(transaction.getTransactionId(),
                     transaction), null);
+            log.info("Encrypted transaction key : {} ",transaction.getEncryptedKyc());
             return transaction.getEncryptedKyc();
 
         } catch (EsignetException ex) {
