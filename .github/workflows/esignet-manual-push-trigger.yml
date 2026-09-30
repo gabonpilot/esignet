@@ -4,10 +4,28 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  build_maven_esignet:
+    uses: iiitb-pilot/kattu/.github/workflows/maven-build.yml@master
+
+    with:
+      SERVICE_LOCATION: ./esignet-service
+      BUILD_ARTIFACT: esignet
+
+    secrets:
+      OSSRH_USER: ${{ secrets.OSSRH_USER }}
+      OSSRH_SECRET: ${{ secrets.OSSRH_SECRET }}
+      OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
+      GPG_SECRET: ${{ secrets.GPG_SECRET }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+
   build_dockers:
+    needs: build_maven_esignet
+
     strategy:
       matrix:
         include:
+
           - SERVICE_LOCATION: 'oidc-ui'
             SERVICE_NAME: 'oidc-ui'
 
