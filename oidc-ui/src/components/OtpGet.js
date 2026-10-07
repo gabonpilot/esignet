@@ -194,10 +194,10 @@ export default function OtpGet({
           ? countryCode
           : currentLoginID.prefixes
         : "";
-      let id = individualId;
+            let id = individualId ? individualId.trim().toLowerCase() : "";
       let postfix = currentLoginID.postfix ? currentLoginID.postfix : "";
 
-      let ID = prefix + id + postfix;
+      let ID = (prefix + id + postfix).toLowerCase();
       // let ID = id;
 
       let otpChannels = commaSeparatedChannels.split(",").map((x) => x.trim());
