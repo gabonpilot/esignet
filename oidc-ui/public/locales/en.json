@@ -168,6 +168,7 @@
     "nrc": "NRC ID",
     "vid": "UIN/VID",
     "email": "Email",
+    "nipnumber": "NIP",
     "login_with_id": "Login with {{currentID}}",
     "verify_with_id": "Verify with {{currentID}}",
     "link_using_id": "Link using {{currentID}}",
