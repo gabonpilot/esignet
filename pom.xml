@@ -302,16 +302,17 @@
 					<version>${maven.javadoc.version}</version>
 					<executions>
 						<execution>
-					 		<id>attach-javadocs</id>
-					  		<goals>
+							<id>attach-javadocs</id>
+							<goals>
 								<goal>jar</goal>
 							</goals>
 						</execution>
 					</executions>
 					<configuration>
-                         <doclint>none</doclint>
-                	</configuration>
-               </plugin>
+						<doclint>none</doclint>
+						<aggregate>true</aggregate>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.sonatype.central</groupId>
 					<artifactId>central-publishing-maven-plugin</artifactId>
@@ -364,13 +365,6 @@
 					<forceJavacCompilerUse>true</forceJavacCompilerUse>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<aggregate>true</aggregate>
 				</configuration>
 			</plugin>
 			<plugin>
