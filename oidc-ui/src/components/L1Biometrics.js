@@ -191,8 +191,8 @@ export default function L1Biometrics({
         ? countryCode
         : currentLoginID.prefixes
       : "";
-    let id = individualId;
-    let postfix = currentLoginID.postfix ? currentLoginID.postfix : "";
+    let id = individualId ? individualId.toLowerCase() : "";
+     let postfix = currentLoginID.postfix ? currentLoginID.postfix : "";
 
     let ID = prefix + id + postfix;
 
